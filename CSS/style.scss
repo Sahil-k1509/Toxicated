@@ -1,3 +1,5 @@
+@import "./mediaquery";
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +9,12 @@
 html{
     font-size: 62.5%;
     background-color: rgb(214, 242, 247);
+    @include respond("q4"){
+        font-size: 50%;
+    }
+    @include respond("q5"){
+        font-size: 40%;
+    }
 }
 
 h1{
@@ -59,6 +67,12 @@ h1{
     font-size: 2rem;
     transition: all 1s ease;
     border-radius: 5px;
+    @include respond("q1"){
+        font-size: 4rem;
+    }
+    @include respond("q2"){
+        font-size: 4rem;
+    }
 }
 .to-the-game:hover, .help:hover {
     background-color: lightseagreen;
@@ -69,16 +83,56 @@ h1{
 .to-the-game{
     top: 30%;
     right: 10%;
+    @include respond("q1"){
+        top: 80%;
+        left: 20%;
+    }
+    @include respond("q2"){
+        top: 80%;
+        left: 20%;
+    }
+    @include respond("q5"){
+        top: 90%;
+        left: 30%;
+    }
 }
 .help{
     top: 35%;
     right: 10%;
+    @include respond("q1"){
+        top: 80%;
+        right: 20%;
+    }
+    @include respond("q2"){
+        top: 80%;
+        right: 20%;
+    }
+    @include respond("q5"){
+        top: 90%;
+        right: 30%;
+    }
 }
 
 .image{
     position: absolute;
     top: 20%;
     transform: rotateY(180deg);
+    @include respond("q1"){
+        top: 10%;
+    }
+    @include respond("q2"){
+        top: 10%;
+    }
+    @include respond("q4"){
+        transform: scale(0.5) rotateY(180deg);
+        top: 0%;
+        right: 20%;
+    }
+    @include respond("q5"){
+        transform: scale(0.5) rotateY(180deg);
+        top: 0%;
+        right: 55%;
+    }
 }
 
 .intro-text{
@@ -100,6 +154,25 @@ h1{
     .fact{
         margin-left: 2rem;
     }
+    @include respond("q3"){
+        width: 40%;  
+        left: 60%;
+    }
+    @include respond("q1"){
+        top: 55%;
+        width: 50%;
+        left: 69%;
+    }
+    @include respond("q2"){
+        top: 55%;
+        width: 50%;
+        left: 69%;
+    }
+    @include respond("q4"){
+        width: 60%;  
+        left: 70%;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
 }
 
 @keyframes revolution{
@@ -120,16 +193,43 @@ h1{
     bottom: 25%;
     right: 15%;
     animation: falling 3s ease infinite;
+    @include respond("q1"){
+        top: 30%;
+    }
+    @include respond("q2"){
+        top: 30%;
+    }
+    @include respond("q4"){
+        top: 32%;
+    }
 }
 .a2{
     bottom: 25%;
     right: 10%;
     animation: falling 3s ease infinite 1s;
+    @include respond("q1"){
+        top: 30%;
+    }
+    @include respond("q2"){
+        top: 30%;
+    }
+    @include respond("q4"){
+        top: 32%;
+    }
 }
 .a3{
     bottom: 25%;
     right: 5%;
     animation: falling 3s ease infinite 2s;
+    @include respond("q1"){
+        top: 30%;
+    }
+    @include respond("q2"){
+        top: 30%;
+    }
+    @include respond("q4"){
+        top: 32%;
+    }
 }
 
 @keyframes falling{
@@ -176,6 +276,13 @@ h1{
     text-decoration: none;
     color: black;
     transition: all 1s ease;
+    @include respond("q1"){
+        top: 30%;
+    }
+    @include respond("q2"){
+        top: 20%;
+        left: 30%;
+    }
 }
 .mode:hover{
     transform: scale(1.5) translateY(-10px);
@@ -187,12 +294,26 @@ h1{
 }
 .medium{
     top: 60%;
+    @include respond("q1"){
+        top: 40%;
+    }
+    @include respond("q2"){
+        top: 30%;
+        left: 50%;
+    }
 }
 .medium:hover{
     background-color:  yellow;
 }
 .hard{
     top: 70%;
+    @include respond("q1"){
+        top: 50%;
+    }
+    @include respond("q2"){
+        top: 40%;
+        left: 70%;
+    }
 }
 .hard:hover{
     background-color: rgb(255, 74, 74);
@@ -208,6 +329,12 @@ h1{
     border: 2px solid black;
     background-color: antiquewhite;
     border-radius: 20px;
+    @include respond("q1"){
+        top: 5%;
+    }
+    @include respond("q4"){
+        left: 10%;
+    }
 }
 
 #game-ended{
@@ -239,6 +366,15 @@ canvas{
                 0 0 20px  black,
                 0 0 50px  black,
                 0 0 100px  black;
+    
+    @include respond("q1"){
+        top: 45%;
+        transform: translate(-50%, -50%);
+    }
+    @include respond("q5"){
+        top: 45%;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
 }
 
 .container-help{
@@ -258,11 +394,36 @@ canvas{
         h2{
             margin-bottom: 1.5rem;
         }
+        @include respond("q1"){
+            font-size: 3rem;
+            line-height: 4rem;
+        }
     }
     .levels{
         text-align: left;
         line-height: 2.5rem;
         margin: 3rem;
         font-size: 2rem;
+        @include respond("q1"){
+            font-size: 3rem;
+            line-height: 4rem;
+        }
     }
+    @include respond("q1"){
+        top: 40%;
+        width: 80%;
+    }
+    @include respond("q2"){
+        top: 40%;
+        width: 80%;
+    }
+    @include respond("q4"){
+        top: 50%;
+        width: 80%;
+    }
+    @include respond("q5"){
+        top: 55%;
+        width: 80%;
+    }
+    
 }

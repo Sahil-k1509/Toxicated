@@ -10,6 +10,18 @@ html {
   background-color: #d6f2f7;
 }
 
+@media (max-width: 420px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 500px) {
+  html {
+    font-size: 40%;
+  }
+}
+
 h1 {
   position: absolute;
   left: 50%;
@@ -145,6 +157,18 @@ h1 .letter-17 {
   border-radius: 5px;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .to-the-game, .help {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .to-the-game, .help {
+    font-size: 4rem;
+  }
+}
+
 .to-the-game:hover, .help:hover {
   background-color: lightseagreen;
   color: white;
@@ -158,9 +182,51 @@ h1 .letter-17 {
   right: 10%;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .to-the-game {
+    top: 80%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 800px) {
+  .to-the-game {
+    top: 80%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 500px) {
+  .to-the-game {
+    top: 90%;
+    left: 30%;
+  }
+}
+
 .help {
   top: 35%;
   right: 10%;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .help {
+    top: 80%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 800px) {
+  .help {
+    top: 80%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 500px) {
+  .help {
+    top: 90%;
+    right: 30%;
+  }
 }
 
 .image {
@@ -168,6 +234,36 @@ h1 .letter-17 {
   top: 20%;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .image {
+    top: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .image {
+    top: 10%;
+  }
+}
+
+@media (max-width: 420px) {
+  .image {
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
+    top: 0%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 500px) {
+  .image {
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
+    top: 0%;
+    right: 55%;
+  }
 }
 
 .intro-text {
@@ -192,6 +288,38 @@ h1 .letter-17 {
 
 .intro-text .fact {
   margin-left: 2rem;
+}
+
+@media (max-width: 1200px) and (min-height: 700px) {
+  .intro-text {
+    width: 40%;
+    left: 60%;
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .intro-text {
+    top: 55%;
+    width: 50%;
+    left: 69%;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro-text {
+    top: 55%;
+    width: 50%;
+    left: 69%;
+  }
+}
+
+@media (max-width: 420px) {
+  .intro-text {
+    width: 60%;
+    left: 70%;
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 @-webkit-keyframes revolution {
@@ -222,6 +350,24 @@ h1 .letter-17 {
           animation: falling 3s ease infinite;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .a1 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 800px) {
+  .a1 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 420px) {
+  .a1 {
+    top: 32%;
+  }
+}
+
 .a2 {
   bottom: 25%;
   right: 10%;
@@ -229,11 +375,47 @@ h1 .letter-17 {
           animation: falling 3s ease infinite 1s;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .a2 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 800px) {
+  .a2 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 420px) {
+  .a2 {
+    top: 32%;
+  }
+}
+
 .a3 {
   bottom: 25%;
   right: 5%;
   -webkit-animation: falling 3s ease infinite 2s;
           animation: falling 3s ease infinite 2s;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .a3 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 800px) {
+  .a3 {
+    top: 30%;
+  }
+}
+
+@media (max-width: 420px) {
+  .a3 {
+    top: 32%;
+  }
 }
 
 @-webkit-keyframes falling {
@@ -302,6 +484,19 @@ h1 .letter-17 {
   transition: all 1s ease;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .mode {
+    top: 30%;
+  }
+}
+
+@media (max-width: 800px) {
+  .mode {
+    top: 20%;
+    left: 30%;
+  }
+}
+
 .mode:hover {
   -webkit-transform: scale(1.5) translateY(-10px);
           transform: scale(1.5) translateY(-10px);
@@ -317,12 +512,38 @@ h1 .letter-17 {
   top: 60%;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .medium {
+    top: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .medium {
+    top: 30%;
+    left: 50%;
+  }
+}
+
 .medium:hover {
   background-color: yellow;
 }
 
 .hard {
   top: 70%;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .hard {
+    top: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hard {
+    top: 40%;
+    left: 70%;
+  }
 }
 
 .hard:hover {
@@ -340,6 +561,18 @@ h1 .letter-17 {
   border: 2px solid black;
   background-color: antiquewhite;
   border-radius: 20px;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .speed {
+    top: 5%;
+  }
+}
+
+@media (max-width: 420px) {
+  .speed {
+    left: 10%;
+  }
 }
 
 #game-ended {
@@ -373,6 +606,22 @@ canvas {
           box-shadow: 0 0 5px  black, 0 0 20px  black, 0 0 50px  black, 0 0 100px  black;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  canvas {
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 900px) and (max-height: 500px) {
+  canvas {
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
 .container-help {
   position: absolute;
   top: 50%;
@@ -396,10 +645,52 @@ canvas {
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .container-help .instructions {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
 .container-help .levels {
   text-align: left;
   line-height: 2.5rem;
   margin: 3rem;
   font-size: 2rem;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .container-help .levels {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .container-help {
+    top: 40%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-help {
+    top: 40%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container-help {
+    top: 50%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 500px) {
+  .container-help {
+    top: 55%;
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
