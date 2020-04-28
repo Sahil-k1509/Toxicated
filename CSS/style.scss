@@ -63,6 +63,7 @@ h1{
     position: absolute;
     text-decoration: none;
     color: black;
+    width: 25%;
     display: block;
     font-size: 2rem;
     transition: all 1s ease;
@@ -410,11 +411,11 @@ canvas{
         }
     }
     @include respond("q1"){
-        top: 40%;
+        top: 50%;
         width: 80%;
     }
     @include respond("q2"){
-        top: 40%;
+        top: 50%;
         width: 80%;
     }
     @include respond("q4"){

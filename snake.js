@@ -1,6 +1,7 @@
 const mode = document.querySelector(".speed");
 const over = document.getElementById("game-ended");
 
+
 const cvs = document.getElementById("snake");
 const ctx = cvs.getContext("2d");
 
@@ -62,8 +63,29 @@ let score = 0;
 let d;
 
 document.addEventListener("keydown",direction);
+document.addEventListener("touchstart", mobileDir);
+document.addEventListener("touchend", mobileDir);
+
+
+
+function mobileDir(event){
+    event.preventDefault();
+    let key = event.touches[0];
+    let x_start, x_end, y_start, y_end;
+    if (event.type == "touchstart"){
+        x_start = key.pageX;
+        y_start = key.pageY;
+    }
+    if (event.type == "touchend"){
+        x_end = key.PageX;
+        y_end = key.pageY;
+    }
+    alert(x_start, y_start);
+    alert(x_end, y_end);
+}
 
 function direction(event){
+    event.preventDefault();
     let key = event.keyCode;
     if( key == 37 && d != "RIGHT"){
         left.play();
@@ -202,6 +224,15 @@ function bumped(head, dir){
 
 // draw everything to the canvas
 let gameOver = false;
+
+let ping = 100, newPing = 100;
+
+if (mode.innerHTML == "EASY"){
+    ping = 160;
+} else if (mode.innerHTML == "HARD"){
+    ping = 60;
+}
+
 function draw(){
     
     ctx.drawImage(ground,0,0);
@@ -267,16 +298,10 @@ function draw(){
         over.style.width = "50%";
         over.style.fontSize = "7rem";
     }
+
 }
 
 // call draw function every 100 ms
-let ping = 100;
-
-if (mode.innerHTML == "EASY"){
-    ping = 160;
-} else if (mode.innerHTML == "HARD"){
-    ping = 60;
-}
 
 let game = setInterval(draw, ping);
 
