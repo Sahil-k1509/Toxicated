@@ -63,44 +63,7 @@ let score = 0;
 let d;
 
 document.addEventListener("keydown",direction);
-document.addEventListener("touchstart", mobileDirSt);
-document.addEventListener("touchmove", mobileDirSt);
 
-
-const start = document.getElementById("start");
-//const end = document.getElementById("end");
-
-let x_start=0, x_end=0, y_start=0, y_end=0;
-function mobileDirSt(event){
-    let key = event.touches[0];
-    if (event.type == "touchstart"){
-        x_start = key.pageX;
-        y_start = key.pageY;
-    }
-    if (event.type == "touchmove"){
-        if( (event.touches[0].pageX < x_start) && d != "RIGHT"){
-            left.play();
-            d = "LEFT";
-        }else if( (event.touches[0].pageY > y_start) && d != "DOWN"){
-            d = "UP";
-            up.play();
-        }else if( (event.touches[0].pageX > x_start) && d != "LEFT"){
-            d = "RIGHT";
-            right.play();
-        }else if( (event.touches[0].pageY < y_start) && d != "UP"){
-            d = "DOWN";
-            down.play();
-        }
-    }
-    /*
-    if (event.type == "touchend"){
-        x_end = key.PageX;
-        y_end = key.pageY;
-    }
-    */
-    //start.innerHTML = `${x_start} ${y_start} ${event.type}`;
-    //end.innerHTML = `${x_end} ${y_end} ${event.type}`;
-}
 function direction(event){
     event.preventDefault();
     let key = event.keyCode;
@@ -118,6 +81,23 @@ function direction(event){
         down.play();
     }
 }
+
+document.getElementById("moveup").addEventListener("click", function(event){
+    if (d != "DOWN")
+        d = "UP";
+});
+document.getElementById("movedown").addEventListener("click", function(event){
+    if (d != "UP")
+        d = "DOWN";
+});
+document.getElementById("moveleft").addEventListener("click", function(event){
+    if (d != "RIGHT")
+        d = "LEFT";
+});
+document.getElementById("moveright").addEventListener("click", function(event){
+    if (d != "LEFT")
+        d = "RIGHT";
+});
 
 // cheack collision function
 function collision(head,array){
