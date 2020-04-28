@@ -694,4 +694,28 @@ canvas {
     width: 80%;
   }
 }
+
+#moveup, #movedown, #moveright, #moveleft {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#moveup {
+  bottom: 12%;
+}
+
+#movedown {
+  bottom: 4%;
+}
+
+#moveleft {
+  left: 40%;
+}
+
+#moveright {
+  left: 60%;
+}
 /*# sourceMappingURL=style.css.map */
