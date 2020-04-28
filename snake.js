@@ -68,10 +68,10 @@ document.addEventListener("touchend", mobileDir);
 
 
 
+let x_start=0, x_end=0, y_start=0, y_end=0;
 function mobileDir(event){
     event.preventDefault();
     let key = event.touches[0];
-    let x_start, x_end, y_start, y_end;
     if (event.type == "touchstart"){
         x_start = key.pageX;
         y_start = key.pageY;
