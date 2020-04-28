@@ -431,12 +431,22 @@ canvas{
 
 #moveup, #movedown, #moveright, #moveleft {
     position: absolute;
-    bottom: 8%;
+    bottom: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
+    visibility: hidden;
+
+    @include respond("q1"){
+        visibility: visible;
+    }
+    @include respond("q4"){
+        visibility: visible;
+    }
+    
+    
 }
 
 #moveup{ bottom: 12%;}
-#movedown{ bottom:4%}
-#moveleft{ left: 40%;}
-#moveright{ left: 60%;}
+#movedown{ bottom:0%}
+#moveleft{ left: 30%;}
+#moveright{ left: 70%;}

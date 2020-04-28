@@ -697,10 +697,23 @@ canvas {
 
 #moveup, #movedown, #moveright, #moveleft {
   position: absolute;
-  bottom: 8%;
+  bottom: 6%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  #moveup, #movedown, #moveright, #moveleft {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 420px) {
+  #moveup, #movedown, #moveright, #moveleft {
+    visibility: visible;
+  }
 }
 
 #moveup {
@@ -708,14 +721,14 @@ canvas {
 }
 
 #movedown {
-  bottom: 4%;
+  bottom: 0%;
 }
 
 #moveleft {
-  left: 40%;
+  left: 30%;
 }
 
 #moveright {
-  left: 60%;
+  left: 70%;
 }
 /*# sourceMappingURL=style.css.map */
