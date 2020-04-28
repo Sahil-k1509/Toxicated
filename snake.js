@@ -80,8 +80,8 @@ function mobileDir(event){
         x_end = key.PageX;
         y_end = key.pageY;
     }
-    alert(x_start, y_start);
-    alert(x_end, y_end);
+    alert(`x: ${x_start} y: ${y_start}`);
+    alert(`x: ${x_end} y: ${y_end}`);
 }
 
 function direction(event){
