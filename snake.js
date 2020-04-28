@@ -68,6 +68,9 @@ document.addEventListener("touchend", mobileDir);
 
 
 
+const start = document.getElementById("start");
+const end = document.getElementById("end");
+
 let x_start=0, x_end=0, y_start=0, y_end=0;
 function mobileDir(event){
     event.preventDefault();
@@ -80,8 +83,9 @@ function mobileDir(event){
         x_end = key.PageX;
         y_end = key.pageY;
     }
-    alert(`x: ${x_start} y: ${y_start}  ${event.type}`);
-    alert(`x: ${x_end} y: ${y_end}  ${event.type}`);
+    
+    start.innerHTML = `${x_start} ${y_start} ${event.type}`;
+    end.innerHTML = `${x_end} ${y_end} ${event.type}`;
 }
 
 function direction(event){
