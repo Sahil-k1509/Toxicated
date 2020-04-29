@@ -717,18 +717,18 @@ canvas {
 }
 
 #moveup {
-  bottom: 12%;
+  bottom: 11%;
 }
 
 #movedown {
-  bottom: 0%;
+  bottom: 1%;
 }
 
 #moveleft {
-  left: 30%;
+  left: 35%;
 }
 
 #moveright {
-  left: 70%;
+  left: 65%;
 }
 /*# sourceMappingURL=style.css.map */
