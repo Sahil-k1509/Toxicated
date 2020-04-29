@@ -92,6 +92,7 @@ function set_init(event){
 }
 
 function move_snake(event){
+    event.preventDefault();
     let coordinate = event.touches[0];
     presentX = coordinate.pageX;
     presentY = coordinate.pageY;
