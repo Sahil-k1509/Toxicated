@@ -97,24 +97,28 @@ function move_snake(event){
     presentY = coordinate.pageY;
     console.log(`${presentX}   ${presentY}`);
 
-    if (presentY > startY && (Math.abs(presentX - startX) < 100)){
+    if (presentY > startY && (Math.abs(presentX - startX) < 50)){
         if (d != "UP"){
             d  = "DOWN";
+            down.play();
         }
     }
-    else if (presentY < startY && (Math.abs(presentX - startX) < 100)){
+    else if (presentY < startY && (Math.abs(presentX - startX) < 50)){
         if (d != "DOWN"){
             d = "UP";
+            up.play();
         }
     }
-    else if (presentX > startX && (Math.abs(presentY - startY) < 100)){
+    else if (presentX > startX && (Math.abs(presentY - startY) < 50)){
         if (d != "LEFT"){
             d = "RIGHT";
+            right.play();
         }
     }
-    else if (presentX < startX && (Math.abs(presentY - startY) < 100)){
+    else if (presentX < startX && (Math.abs(presentY - startY) < 50)){
         if (d != "RIGHT"){
             d = "LEFT";
+            left.play();
         }
     }
     

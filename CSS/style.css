@@ -463,6 +463,14 @@ h1 .letter-17 {
   transition: all 0.5s ease-in-out;
 }
 
+@media (max-width: 1200px) and (min-height: 1200px) {
+  .main-menu {
+    font-size: 3rem;
+    z-index: 99;
+    padding: 1rem;
+  }
+}
+
 .main-menu:hover {
   background-color: rgba(27, 27, 27, 0.897);
   color: rgba(255, 249, 240, 0.884);
@@ -567,6 +575,8 @@ h1 .letter-17 {
 @media (max-width: 1200px) and (min-height: 1200px) {
   .speed {
     top: 5%;
+    padding: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -684,7 +694,7 @@ canvas {
 @media (max-width: 420px) {
   .container-help {
     top: 50%;
-    width: 80%;
+    width: 100%;
   }
 }
 

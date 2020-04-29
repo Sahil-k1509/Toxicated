@@ -258,6 +258,12 @@ h1{
     background-color: rgba(255, 249, 240, 0.884);
     padding: 5px;
     transition: all 0.5s ease-in-out;
+
+    @include respond("q1"){
+        font-size: 3rem;
+        z-index: 99;
+        padding: 1rem;
+    }
 }
 .main-menu:hover{
     background-color: rgba(27, 27, 27, 0.897);
@@ -332,6 +338,8 @@ h1{
     border-radius: 20px;
     @include respond("q1"){
         top: 5%;
+        padding: 2rem;
+        font-size: 3rem;
     }
     @include respond("q4"){
         left: 10%;
@@ -420,7 +428,7 @@ canvas{
     }
     @include respond("q4"){
         top: 50%;
-        width: 80%;
+        width: 100%;
     }
     @include respond("q5"){
         top: 55%;
