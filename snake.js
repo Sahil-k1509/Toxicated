@@ -5,6 +5,9 @@ const over = document.getElementById("game-ended");
 const cvs = document.getElementById("snake");
 const ctx = cvs.getContext("2d");
 
+const spdup = document.getElementById("speedup");
+const spdwn = document.getElementById("speeddown");
+
 // create the unit
 const box = 32;
 
@@ -281,7 +284,7 @@ let gameOver = false;
 let ping = 100, newPing = 100;
 
 if (mode.innerHTML == "EASY"){
-    ping = 160;
+    ping = 150;
 } else if (mode.innerHTML == "HARD"){
     ping = 60;
 }
@@ -354,7 +357,45 @@ function draw(){
 
 }
 
-// call draw function every 100 ms
+let original = ping;
+
+spdup.addEventListener('click', function(event){
+    if (!gameOver){
+        clearInterval(game)
+        if (ping >= 0.5*original){
+            ping -=20;
+            game = setInterval(draw, ping);
+        }
+        else {
+            alert('Speed thrills; But kills');
+            game = setInterval(draw, ping);
+        }
+    }
+})
+
+
+spdwn.addEventListener('click', function(event){
+    if (!gameOver){
+        clearInterval(game)
+        if (mode.innerHTML == "HARD" && ping >= original){
+            alert("Sike Nibba, You thought...");
+            game = setInterval(draw, ping);
+            return;
+        }
+        if (mode.innerHTML == "EASY" && ping >= original){
+            alert("Aur Slow mat kar...");
+            game = setInterval(draw, ping);
+            return;
+        }
+        if (ping <= 1.4*original){
+            ping +=20;
+            game = setInterval(draw, ping);
+        } else {
+            alert('Kitna slow krega');
+            game = setInterval(draw, ping);
+        }
+    }
+})
 
 let game = setInterval(draw, ping);
 
