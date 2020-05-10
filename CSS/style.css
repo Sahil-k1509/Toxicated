@@ -212,21 +212,21 @@ h1 .letter-17 {
 
 @media (max-width: 1200px) and (min-height: 1200px) {
   .help {
-    top: 80%;
+    top: 90%;
     right: 10%;
   }
 }
 
 @media (max-width: 800px) {
   .help {
-    top: 80%;
+    top: 90%;
     right: 10%;
   }
 }
 
 @media (max-width: 900px) and (max-height: 500px) {
   .help {
-    top: 90%;
+    top: 98%;
     right: 20%;
   }
 }
