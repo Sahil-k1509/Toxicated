@@ -150,12 +150,13 @@ h1 .letter-17 {
   position: absolute;
   text-decoration: none;
   color: black;
-  width: 25%;
-  display: block;
-  font-size: 2rem;
+  width: 20rem;
+  display: inline-block;
+  font-size: 2.5rem;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   border-radius: 5px;
+  text-align: center;
 }
 
 @media (max-width: 1200px) and (min-height: 1200px) {
@@ -180,7 +181,7 @@ h1 .letter-17 {
 
 .to-the-game {
   top: 30%;
-  right: 10%;
+  right: 5%;
 }
 
 @media (max-width: 1200px) and (min-height: 1200px) {
@@ -205,8 +206,8 @@ h1 .letter-17 {
 }
 
 .help {
-  top: 35%;
-  right: 10%;
+  top: 37%;
+  right: 5%;
 }
 
 @media (max-width: 1200px) and (min-height: 1200px) {
@@ -483,7 +484,7 @@ h1 .letter-17 {
   font-size: 2rem;
   border: 2px double black;
   border-radius: 10px;
-  top: 50%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -518,7 +519,7 @@ h1 .letter-17 {
 }
 
 .medium {
-  top: 60%;
+  top: 40%;
 }
 
 @media (max-width: 1200px) and (min-height: 1200px) {
@@ -539,7 +540,7 @@ h1 .letter-17 {
 }
 
 .hard {
-  top: 70%;
+  top: 50%;
 }
 
 @media (max-width: 1200px) and (min-height: 1200px) {
@@ -584,6 +585,72 @@ h1 .letter-17 {
   .speed {
     left: 10%;
   }
+}
+
+#speedup {
+  position: absolute;
+  left: 60%;
+  top: 8%;
+  padding: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+  border: 2px solid black;
+  background-color: #d7d9fa;
+  border-radius: 5px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  #speedup {
+    left: 75%;
+    padding: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  #speedup {
+    left: 10%;
+  }
+}
+
+#speeddown {
+  position: absolute;
+  left: 40%;
+  top: 8%;
+  padding: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+  border: 2px solid black;
+  background-color: #d7d7fa;
+  border-radius: 5px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (max-width: 1200px) and (min-height: 1200px) {
+  #speeddown {
+    left: 25%;
+    padding: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  #speeddown {
+    left: 10%;
+  }
+}
+
+#speedup:hover, #speeddown:hover {
+  color: white;
+  background-color: darkblue;
+  -webkit-transform: translate(-50%, -5px);
+          transform: translate(-50%, -5px);
+  cursor: pointer;
 }
 
 #game-ended {
