@@ -88,15 +88,15 @@ h1{
 
     @include respond("q1"){
         top: 80%;
-        left: 20%;
+        left: 10%;
     }
     @include respond("q2"){
         top: 80%;
-        left: 20%;
+        left: 10%;
     }
     @include respond("q5"){
         top: 90%;
-        left: 30%;
+        left: 20%;
     }
 }
 .help{
@@ -104,15 +104,15 @@ h1{
     right: 5%;
     @include respond("q1"){
         top: 80%;
-        right: 20%;
+        right: 10%;
     }
     @include respond("q2"){
         top: 80%;
-        right: 20%;
+        right: 10%;
     }
     @include respond("q5"){
         top: 90%;
-        right: 30%;
+        right: 20%;
     }
 }
 
